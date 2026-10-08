@@ -73,9 +73,9 @@ O comando usa o test runner nativo do Node.js para verificar a geração do plan
 
 ## Publicação no GitHub Pages
 
-O workflow `.github/workflows/deploy-pages.yml` publica automaticamente o conteúdo de `app/` no GitHub Pages quando há um push para a branch `main`. Ele também habilita o Pages automaticamente. É possível iniciar a publicação manualmente pela aba **Actions** usando **Deploy to GitHub Pages**.
+O workflow `.github/workflows/deploy-pages.yml` publica automaticamente o conteúdo de `app/` no GitHub Pages quando há um push para a branch `main`. Na primeira publicação, habilite o Pages em **Settings > Pages** e selecione **GitHub Actions** como origem de publicação. É possível iniciar a publicação manualmente pela aba **Actions** usando **Deploy to GitHub Pages**.
 
-Se as políticas do repositório ou da organização impedirem a habilitação automática, abra **Settings > Pages** no repositório e selecione **GitHub Actions** como origem de publicação. Quando o workflow terminar, o endereço do site aparece no resumo da execução e em **Settings > Pages**.
+Quando o workflow terminar, o endereço do site aparece no resumo da execução e em **Settings > Pages**.
 
 ## Scripts disponíveis
 
