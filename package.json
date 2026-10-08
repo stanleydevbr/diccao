@@ -1,0 +1,10 @@
+{
+    "name": "diccao",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "node --test app/tests/*.test.js",
+        "dev": "python -m http.server 8000 --directory app"
+    }
+}

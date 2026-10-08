@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicção</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">D</span>
+        <span>Dicção</span>
+      </div>
+      <nav>
+        <a href="#exercises">Exercícios</a>
+        <a href="#plan">Plano</a>
+        <a href="#recorder">Gravação</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Treino de fala</p>
+          <h1>Fale com clareza. Fale com força.</h1>
+          <p class="summary">
+            Pratique dicção em blocos curtos, grave sua voz e ouça sua evolução.
+          </p>
+          <div class="actions">
+            <a class="primary" href="#exercises">Começar</a>
+            <a class="secondary" href="#recorder">Gravar hoje</a>
+          </div>
+        </div>
+        <div class="spotlight-card">
+          <p>Meta da semana</p>
+          <strong>5 treinos</strong>
+          <ul>
+            <li>Respiração controlada</li>
+            <li>Articulação limpa</li>
+            <li>Tom estável</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="exercises" class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Caderno</p>
+            <h2>Exercícios práticos</h2>
+          </div>
+          <label>
+            Nível
+            <select id="levelSelect">
+              <option value="iniciante">Iniciante</option>
+              <option value="intermediario">Intermediário</option>
+              <option value="avancado">Avançado</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="exercise-shell">
+          <div id="exerciseList" class="exercise-list"></div>
+          <article id="exerciseDetail" class="exercise-detail"></article>
+        </div>
+      </section>
+
+      <section id="plan" class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Plano</p>
+            <h2>Rotina prática</h2>
+          </div>
+        </div>
+        <div id="planGrid" class="plan-grid"></div>
+      </section>
+
+      <section id="recorder" class="panel recorder-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Gravação</p>
+            <h2>Pratique e ouça sua voz</h2>
+          </div>
+        </div>
+
+        <div class="recorder-box">
+          <div class="controls">
+            <button id="recordButton" class="record-btn">Gravar</button>
+            <button id="playbackButton" class="secondary">Ouvir última gravação</button>
+          </div>
+          <div class="status-line">
+            <span id="recorderState">Pronto para gravar.</span>
+            <span id="recordingTimer">00:00</span>
+          </div>
+          <audio id="audioPlayer" controls></audio>
+        </div>
+
+        <div class="note-box">
+          <label for="noteInput">Anotações do exercício</label>
+          <textarea id="noteInput" rows="5" placeholder="O que foi bom? O que precisa melhorar?"></textarea>
+          <button id="saveNoteButton" class="primary">Salvar nota</button>
+          <p id="noteStatus" class="note-status"></p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
